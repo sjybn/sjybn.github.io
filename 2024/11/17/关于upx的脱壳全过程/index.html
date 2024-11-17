@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>关于upx的脱壳全过程 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="关于upx脱壳的过程 1.加壳首先，如果我想要脱壳，那我就需要有加了upx壳的文件，但是我没有啊，于是我就伸手向林吴扬学长要，但学长让我自己找upx，自己加壳，是为了脱壳我先学加壳，这个不难，难的是upx，对于我这个纯新来说有点难找，昊扬学长让我找承泽学长，陈哲学长让我用csdn找，找到后我也是成功把自己原先的c语言文件exe文件加壳。 2.脱壳工具的选择与学习使用方向任务中让我们选择ida或db">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于upx的脱壳全过程">
+<meta property="og:url" content="http://example.com/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于upx脱壳的过程 1.加壳首先，如果我想要脱壳，那我就需要有加了upx壳的文件，但是我没有啊，于是我就伸手向林吴扬学长要，但学长让我自己找upx，自己加壳，是为了脱壳我先学加壳，这个不难，难的是upx，对于我这个纯新来说有点难找，昊扬学长让我找承泽学长，陈哲学长让我用csdn找，找到后我也是成功把自己原先的c语言文件exe文件加壳。 2.脱壳工具的选择与学习使用方向任务中让我们选择ida或db">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-17T12:24:19.000Z">
+<meta property="article:modified_time" content="2024-11-17T12:29:26.499Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-关于upx的脱壳全过程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2024-11-17T12:24:19.000Z" itemprop="datePublished">2024-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      关于upx的脱壳全过程
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于upx脱壳的过程</p>
+<p>1.加壳<br>首先，如果我想要脱壳，那我就需要有加了upx壳的文件，但是我没有啊，于是我就伸手向林吴扬学长要，但学长让我自己找upx，自己加壳，是为了脱壳我先学加壳，这个不难，难的是upx，对于我这个纯新来说有点难找，昊扬学长让我找承泽学长，陈哲学长让我用csdn找，找到后我也是成功把自己原先的c语言文件exe文件加壳。</p>
+<p>2.脱壳工具的选择与学习使用<br>方向任务中让我们选择ida或dbg，我刚开始选择了ida，但有它点麻烦，所以我又选择了dbg，但后来发现无论ida和dbg都要使用。我跟着哔哩哔哩的教程学脱壳，一板一眼的复制他的行动，只知过程，不知理论。这个时候又被迫去csdn查了，在处一种到处乱走弯路的情况下终于基本掌握了方法与理论。</p>
+<p>3.upx脱壳的实战<br>首先，打开查壳软件，将文件拖入其中，查看其属性，发现其显示upx壳。接着，将其拖入ida中，发现他没有main主函数。然后，又将其拖入dbg开始脱壳，f8至4个push下面，在rsp内存处设下断点，按下f9运行，停下后发现明显的4个pop和一个明显的大跳jmp，f8大跳后使用dbg插件scylla自动搜寻并转存后获得它的dump文件。最后将他的dump拖入ida中，发现它存在main函数，脱壳成功。</p>
+<p>4.一我的些碎碎念</p>
+<p>这个帖子是人看的，那就应该多些人话，而不是一大堆的流水账，那谁来看啊？</p>
+<p>脱壳这upx太简单了，当学会之后就觉得太简单了，至于我写这篇帖子所花费的时间是实操的好几倍，但这么简单的事情，走了一大堆弯，花了一大堆时间。</p>
+<p>这里我想声明我的学习主张。我的有些同学把技术藏着掖着，别人一问问知识就十分不耐烦，那是没有一句不敷衍的话，但我却喜欢十分积极的回答别人的问题和向别人提问问题。简单的来说，他们主张单独学习，我主张合作。</p>
+<p>我认为我们的敌人从来不是身边的同学们，因此不应该对同学们藏着掖着，相反我们应是朋友，我们应该团结一致对外，我们应当相互技术共享，相互学习优点。我教会了我的一个同学脱壳，我有好的学习资源和工具也都会与他共享，他也为我提供了很多有用的信息，我认为我们是互惠互利的。团结起来才能更加强大，而不是单打独斗，我希望能和更多的人相互合作，坦诚相见。</p>
+<p>或许我的外观举指有些丑恶，但如果眼睛能透视的话，应该能看到我失落的心，我失落于周围的人不愿交流，我失落于心里有话没人可以倾诉，我失落于大家似乎总是以貌取人。不过我仍在寻求上进，不断的寻找朋友而不是敌人，不断的寻找合作者而不是大独狼。</p>
+<p>希望看到帖子的人，不要乱传播，说实话，我不喜欢消息发到网上，但我似乎没什么好倾诉的地方了，同样的，我也不希望我的网址被太多人知道，或许他们会嘲笑我，这似乎与我想寻找朋友的理想相违背，但如果稍微细想，这思想它其实并不矛盾，无论如何感谢你的观看。</p>
+<p>唉，又写多了<br>求你了，别笑我</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/" data-id="cm3lktmkc0001swdmeolfcurl" data-title="关于upx的脱壳全过程" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于ubt虚拟机的搭建
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">心路历程（后续一改）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/">关于ubt虚拟机的搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/">关于upx的脱壳全过程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/">心路历程（后续一改）</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/05/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/">心路历程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/04/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -69,6 +69,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-关于ubt虚拟机的搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2024-11-17T12:30:06.000Z" itemprop="datePublished">2024-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/">关于ubt虚拟机的搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于ubt系统虚似机的搭建</p>
+<p>这还真没什么好说的，所以我就是想说多也说不了几个字，最好笑的是我发现面试那天他的乌班图源文件并没有被我删，只不过是因为原文件文件名被改动，导致无法正走常路径使用，而且太久没有开启那个虚拟机，导致他开的又慢又有问题，以至于我以为它出了问题，但实际上他没有问题，后面我重新开了一次正常启动。</p>
+<p>关于乌班图虚拟机的搭建，它说实话还真没什么好说的，像我搭它都是一个多月前的事情了实在想不起来细节，因为它就很简单，就照着教程找官网，然后下载好了之后正常创建虚拟机就可以了，不过我的VMware是在机缘巧合之下下载的，当初是为了能够使用kali，所以才下的VMware，和上篇同样，我写这博客的时间都够我搭建好几遍虚拟机了。</p>
+<p>最好笑的绝不是这个，最好笑的是我这个傻子又乱走弯路了，我博客的密钥过期了，过期后我不知道怎么恢复，于是我直接把整个仓库和服务器都给删了，但现在zeabur那边不让长久的使用免费服务器了，所以我这个大冤种花了两个小时修博客，修出了一堆反效果！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/" data-id="cm3lktmk90000swdm813cdnyn" data-title="关于ubt虚拟机的搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-关于upx的脱壳全过程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2024-11-17T12:24:19.000Z" itemprop="datePublished">2024-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/">关于upx的脱壳全过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>关于upx脱壳的过程</p>
+<p>1.加壳<br>首先，如果我想要脱壳，那我就需要有加了upx壳的文件，但是我没有啊，于是我就伸手向林吴扬学长要，但学长让我自己找upx，自己加壳，是为了脱壳我先学加壳，这个不难，难的是upx，对于我这个纯新来说有点难找，昊扬学长让我找承泽学长，陈哲学长让我用csdn找，找到后我也是成功把自己原先的c语言文件exe文件加壳。</p>
+<p>2.脱壳工具的选择与学习使用<br>方向任务中让我们选择ida或dbg，我刚开始选择了ida，但有它点麻烦，所以我又选择了dbg，但后来发现无论ida和dbg都要使用。我跟着哔哩哔哩的教程学脱壳，一板一眼的复制他的行动，只知过程，不知理论。这个时候又被迫去csdn查了，在处一种到处乱走弯路的情况下终于基本掌握了方法与理论。</p>
+<p>3.upx脱壳的实战<br>首先，打开查壳软件，将文件拖入其中，查看其属性，发现其显示upx壳。接着，将其拖入ida中，发现他没有main主函数。然后，又将其拖入dbg开始脱壳，f8至4个push下面，在rsp内存处设下断点，按下f9运行，停下后发现明显的4个pop和一个明显的大跳jmp，f8大跳后使用dbg插件scylla自动搜寻并转存后获得它的dump文件。最后将他的dump拖入ida中，发现它存在main函数，脱壳成功。</p>
+<p>4.一我的些碎碎念</p>
+<p>这个帖子是人看的，那就应该多些人话，而不是一大堆的流水账，那谁来看啊？</p>
+<p>脱壳这upx太简单了，当学会之后就觉得太简单了，至于我写这篇帖子所花费的时间是实操的好几倍，但这么简单的事情，走了一大堆弯，花了一大堆时间。</p>
+<p>这里我想声明我的学习主张。我的有些同学把技术藏着掖着，别人一问问知识就十分不耐烦，那是没有一句不敷衍的话，但我却喜欢十分积极的回答别人的问题和向别人提问问题。简单的来说，他们主张单独学习，我主张合作。</p>
+<p>我认为我们的敌人从来不是身边的同学们，因此不应该对同学们藏着掖着，相反我们应是朋友，我们应该团结一致对外，我们应当相互技术共享，相互学习优点。我教会了我的一个同学脱壳，我有好的学习资源和工具也都会与他共享，他也为我提供了很多有用的信息，我认为我们是互惠互利的。团结起来才能更加强大，而不是单打独斗，我希望能和更多的人相互合作，坦诚相见。</p>
+<p>或许我的外观举指有些丑恶，但如果眼睛能透视的话，应该能看到我失落的心，我失落于周围的人不愿交流，我失落于心里有话没人可以倾诉，我失落于大家似乎总是以貌取人。不过我仍在寻求上进，不断的寻找朋友而不是敌人，不断的寻找合作者而不是大独狼。</p>
+<p>希望看到帖子的人，不要乱传播，说实话，我不喜欢消息发到网上，但我似乎没什么好倾诉的地方了，同样的，我也不希望我的网址被太多人知道，或许他们会嘲笑我，这似乎与我想寻找朋友的理想相违背，但如果稍微细想，这思想它其实并不矛盾，无论如何感谢你的观看。</p>
+<p>唉，又写多了<br>求你了，别笑我</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/" data-id="cm3lktmkc0001swdmeolfcurl" data-title="关于upx的脱壳全过程" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-心路历程（后续一改）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/" class="article-date">
@@ -101,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/" data-id="cm3k46j4800023odm32zq0rlp" data-title="心路历程（后续一改）" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/" data-id="cm3lktmkf0004swdmfe9l0nd5" data-title="心路历程（后续一改）" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -145,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/05/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/" data-id="cm3k46j4700013odmeo1m0cw6" data-title="心路历程" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/05/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B/" data-id="cm3lktmkf0003swdm71rkg32j" data-title="心路历程" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -196,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/hello-world/" data-id="cm3k46j4300003odm4spia4ys" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/04/hello-world/" data-id="cm3lktmke0002swdmebsdfj4g" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -237,6 +329,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eubt%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%90%AD%E5%BB%BA/">关于ubt虚拟机的搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/17/%E5%85%B3%E4%BA%8Eupx%E7%9A%84%E8%84%B1%E5%A3%B3%E5%85%A8%E8%BF%87%E7%A8%8B/">关于upx的脱壳全过程</a>
+          </li>
         
           <li>
             <a href="/2024/11/07/%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%EF%BC%88%E5%90%8E%E7%BB%AD%E4%B8%80%E6%94%B9%EF%BC%89/">心路历程（后续一改）</a>
